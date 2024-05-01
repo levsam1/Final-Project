@@ -1,0 +1,71 @@
+**SOFTWARE DEVELOPMENT PROCESS**
+
+// Set default latitude, longitude, and zoom level for Charleston, SC
+Set defaultLat to 32.7834
+Set defaultLng to -79.9370
+Set defaultZoom to 13
+
+// Initialize the map on the 'map' div with default settings
+Initialize map on the 'map' div at defaultLat, defaultLng with defaultZoom
+
+// Add OpenStreetMap tiles to the map
+Add OpenStreetMap tiles to the map
+
+// Create arrays to store markers and lines between markers
+Create empty array markers
+Create empty array lines
+Set totalDistance to 0
+Set unit to 'km'
+
+// Function to calculate the distance between two points in kilometers
+Function calculateDistance(point1, point2):
+    Return the distance between point1 and point2 divided by 1000
+
+// Function to update marker popups and total distance text based on the current unit
+Function updateMarkersAndTotalDistance():
+    For each marker in markers:
+        If the marker's index is greater than 0:
+            Get the previous marker
+            Calculate the distance between the previous marker and the current marker
+            Update the popup content of the current marker with the distance in the current unit
+    Update the total distance displayed on the page
+
+// Function to update the displayed total distance with the current unit
+Function updateTotalDistance():
+    Calculate the total distance in the current unit
+    Update the total distance displayed on the page
+
+// Event handler to toggle between kilometers and miles
+Function toggleUnit():
+    Toggle the unit between kilometers and miles
+    Update the marker popups and total distance with the new unit
+
+// Function to handle adding a marker on map click and drawing a line between the new marker and the previous one
+Function onMapClick(event):
+    Create a marker at the clicked location and add it to the map
+    Add the marker to the markers array
+    If there are at least two markers:
+        Calculate the distance between the last two markers
+        Update the total distance
+        Draw a line between the last two markers and add it to the map
+    Update marker popups and total distance
+
+// Function to reset the map to default settings and remove all markers and lines
+Function resetMap():
+    Reset the map to default view
+    Remove all markers from the map
+    Clear the markers array
+    Reset the total distance
+    Remove all lines from the map
+    Clear the lines array
+    Update marker popups and total distance
+
+// Function to remove the last marker added to the map and update distances
+Function removeLastMarker():
+    If there are markers on the map:
+        Remove the last marker from the map
+        Remove the last line drawn on the map
+        Update the total distance and marker popups
+
+// Register click event on the map to add markers
+Add event listener to the map for 'click' events, calling onMapClick function

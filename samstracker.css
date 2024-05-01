@@ -1,0 +1,39 @@
+body, html {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: black;
+}
+header, footer {
+    background-color: #004d99;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+nav {
+    background: #0066cc;
+    padding: 10px 0;
+    text-align: center;
+}
+nav a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+#map {
+    height: 500px;
+}
+.controls {
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    background-color: black;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.content {
+    padding: 20px;
+}
